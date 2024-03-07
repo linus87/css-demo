@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>justify-self/justify-items Demo</title>
+        <style>
+            .box {
+                padding: 10px;
+                text-align: center;
+                background-color: #0000ff;
+                color: #444;
+            }
+            .inline-container {
+                display: inline-block;
+            }
+            .box-container {
+                margin: 1px 0;
+                background-color: #ccc;
+                color: #444;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: 200px 200px 200px;
+                grid-gap: 10px;
+                background-color: #fff;
+                color: #444;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Features</p>
+        <div>
+            <ul>
+                <li>The justify-self property aligns a grid item within its grid cell in the inline direction.</li>
+                <li>It applies to block-level boxes, absolutely-positioned boxes, and grid items</li>
+                <li>If parent is display:flex, display:block, justify-self won't work.</li>
+                <li>justify-items defines the default justify-self for all items in the box, it's used on parent element</li>
+            </ul>
+        </div>
+        <h2>justify-self not working demos</h2>
+        <section>
+            <p>parent is display:flex</p>
+            <div class="box-container" style="display: flex;">
+                <div class="box" style="justify-self: stretch;">1</div>
+            </div>
+        </section>
+        <section>
+            <p>parent is display:block</p>
+            <div class="box-container" style="display: block;">
+                <div class="box" style="justify-self: end; width:100px;">1</div>
+            </div>
+        </section>
+        <section>
+            <p>parent is display:inline-block</p>
+            <div class="box-container">
+                <div style="display:inline-block; width: 200px; background-color: #0f0;">
+                    <div class="box" style="justify-self: end; width: 100px">1</div>
+                </div>
+            </div>
+        </section>
+        <h2>justify-self on grid item</h2>
+        <section>
+            <p>parent is display:grid</p>
+            <div class="grid-container">
+                <div class="box" style="justify-self: start;">start</div>
+                <div class="box" style="justify-self: center;">center</div>
+                <div class="box" style="justify-self: end; ">end</div>
+                <div class="box" style="justify-self: left;">left</div>
+                <div class="box" style="justify-self: auto;">auto</div>
+                <div class="box" style="justify-self: right; ">right</div>
+                <div class="box" style="justify-self: stretch;">stretch</div>
+                <div class="box" style="justify-self: revert;">revert</div>
+                <div class="box" style="justify-self: normal;">normal</div>
+                <div class="box" style="justify-self: baseline;">baseline</div>
+                <div class="box" style="justify-self: first baseline;">first baseline</div>
+                <div class="box" style="justify-self: last baseline;">last baseline</div>
+            </div>
+        </section>
+
+        <h2>justify-self on absolutely-positioned element</h2>
+        <section>
+            <p>parent is display:grid</p>
+            <div class="grid-container" style="position: relative; width: 100%;height:200px;">
+                <div class="box" style="position: absolute; justify-self: start;">start</div>
+                <div class="box" style="position: absolute; justify-self: center;">center</div>
+                <div class="box" style="position: absolute; justify-self: end; ">end</div>
+                <div class="box" style="position: absolute; justify-self: left;">left</div>
+                <div class="box" style="position: absolute; justify-self: auto;">auto</div>
+                <div class="box" style="position: absolute; justify-self: right; ">right</div>
+                <div class="box" style="position: absolute; justify-self: stretch;">stretch</div>
+                <div class="box" style="position: absolute; justify-self: revert;">revert</div>
+                <div class="box" style="position: absolute; justify-self: normal;">normal</div>
+                <div class="box" style="position: absolute; justify-self: baseline;">baseline</div>
+                <div class="box" style="position: absolute; justify-self: first baseline;">first baseline</div>
+                <div class="box" style="position: absolute; justify-self: last baseline;">last baseline</div>
+            </div>
+        </section>
+
+        <h2>justify-items on grid item</h2>
+        <section>
+            <p>parent is display:grid</p>
+            <div class="grid-container" style="justify-items: center;">
+                <div class="box" style="justify-self: start;">start</div>
+                <div class="box" style="justify-self: center;">center</div>
+                <div class="box" style="justify-self: end; ">end</div>
+                <div class="box" style="justify-self: left;">left</div>
+                <div class="box" style="justify-self: auto;">auto</div>
+                <div class="box" style="justify-self: right; ">right</div>
+                <div class="box" style="justify-self: stretch;">stretch</div>
+                <div class="box" style="justify-self: revert;">revert</div>
+                <div class="box" style="justify-self: normal;">normal</div>
+                <div class="box" style="justify-self: baseline;">baseline</div>
+                <div class="box" style="justify-self: first baseline;">first baseline</div>
+                <div class="box" style="justify-self: last baseline;">last baseline</div>
+            </div>
+        </section>
+
+        
+        
+    </body>
+</html>
