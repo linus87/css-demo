@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>justify-content Demo</title>
+        <style>
+            .box {
+                padding: 10px;
+                text-align: center;
+                background-color: #0000ff;
+                color: #444;
+            }
+            .box-container {
+                margin: 1px 0;
+                background-color: #ccc;
+                color: #444;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Features</h2>
+        <div>
+            <ul>
+                <li>The justify-content applys to flex container.</li>
+                <li>It defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container.</li>
+            </ul>
+        </div>
+
+        <h2>justify-content not working demos</h2>
+        <section>
+            <p>parent is display:block</p>
+            <div class="box-container" style="display: block;">
+                <div class="box" style="justify-content: center; width: 100px;">1</div>
+            </div>
+        </section>
+
+        <h2>justify-content on display:flex parent</h2>
+        <section>
+            <p>parent is display:flex</p>
+            <div class="box-container" style="display: flex; justify-content: center;">
+                <div class="box" style="width: 100px;">1</div>
+            </div>
+        </section>
+    </body>
+</html>
